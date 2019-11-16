@@ -6,5 +6,6 @@ SUITS = '♣ ♢ ♡ ♠'.split()
 
 
 # Game config
+INITIAL_HAND = 2
 POINTS = 21
 ROUNDS = 3
