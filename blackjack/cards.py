@@ -1,4 +1,9 @@
+from functools import total_ordering
 
+import constants as c
+
+
+@total_ordering
 class Card:
 
     ten_points = ['J', 'Q', 'K', 'A']
@@ -20,3 +25,8 @@ class Card:
         if other.__class__ is not self.__class__:
             return NotImplemented
         return self.rank == other.rank
+
+    def __le__(self, other):
+        if other.__class__ is not self.__class__:
+            return NotImplemented
+        return c.RANKS.index(self.rank) <= c.RANKS.index(other.rank)
