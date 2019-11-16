@@ -23,7 +23,7 @@ class Game:
         self.deck.shuffle()
         for player in self.players:
             player.hand = []
-            self.deal(player=player, quantity=2)
+            self.deal(player=player, quantity=c.INITIAL_HAND)
 
     def deal(self, player, quantity=1):
         for card in self.deck.draw(quantity):
